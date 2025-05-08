@@ -1,0 +1,15 @@
+<div class="flex flex-col items-center justify-center">
+<h1>Welcome to my Video Game store.</h1>
+<div :if={@current_user == nil}>
+<p class="mt-5 mb-5">Please log in or signup to view my inventory.</p>
+<div class="flex gap-4 justify-center">
+<.link navigate={~p"/users/log_in"} class="px-4 py-2 bg-blue-500 text-white rounded">Log In</.link>
+<.link navigate={~p"/users/register"} class="px-4 py-2 bg-blue-500 text-white rounded">Sign Up</.link>
+</div>
+</div>
+<div :if={@current_user != nil} class="flex flex-col items-center">
+<p class="mt-5 mb-5">Look at my inventory.</p>
+<.link navigate={~p"/products"} class="px-4 py-2 bg-blue-500 text-white rounded">Products</.link>
+</div>
+<p class="mt-5 mb-5">You can like or dislike my products without logging in. <.link navigate={~p"/products-live"} class="underline">Products Live</.link></p>
+</div>

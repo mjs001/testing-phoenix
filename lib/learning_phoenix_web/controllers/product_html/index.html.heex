@@ -1,0 +1,23 @@
+<h1>SHOP</h1>
+
+<p>Welcome to {@shop_name}!</p>
+ <hr class="my-10" />
+<form>
+  <select name="console" id="console">
+    <option value="pc">PC</option>
+
+    <option value="xbox">Xbox Series S</option>
+
+    <option value="nintendo">Nintendo Switch</option>
+
+    <option value="playstation">Playstation 5 Pro</option>
+
+
+  </select>
+   <button type="submit">Save</button>
+</form>
+
+<p class="my-5">Selected console: {@console}</p>
+<div class="flex flex-col flex-y-2">
+<.product :for={product <- @products} product={product} />
+</div>
